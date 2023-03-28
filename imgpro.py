@@ -40,3 +40,16 @@ def draw_boxes(frame, bulbs):
     # Return the frame with the boxes drawn
     return frame
 
+#
+# frame = cv2.imread('test/images/bedroom.png')
+#
+# bulbs = detect_bulbs(frame)
+#
+# print(bulbs)
+#
+# image = draw_boxes(frame, bulbs)
+#
+# cv2.imshow("bulbs", image)
+# cv2.waitKey(0)
+# cv2.destroyAllWindows()
+
