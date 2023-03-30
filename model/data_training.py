@@ -14,7 +14,7 @@ DATA_PATH = os.path.join('mp_data')  # Path for exported data, numpy arrays
 
 
 #getting dataset values from csv
-with open('datalabels.csv', newline='') as f:
+with open('newlabelstrain.csv', newline='') as f:
     reader = csv.reader(f)
     data = [row[0] for row in reader]
 
