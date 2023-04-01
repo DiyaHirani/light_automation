@@ -1,6 +1,7 @@
 # import dependencies
 import cv2
 import mediapipe as mp
+import numpy as np
 
 # Key points using MP Holistic
 
@@ -17,15 +18,14 @@ def mediapipe_detection(image, model):
     return image, results
 
 
+def extract_keypoints(results):
+    lh = np.array([[res.x, res.y, res.z] for res in results.left_hand_landmarks.landmark]).flatten() \
+        if results.left_hand_landmarks else np.zeros(21 * 3)  # 63
+    rh = np.array([[res.x, res.y, res.z] for res in results.right_hand_landmarks.landmark]).flatten() \
+        if results.right_hand_landmarks else np.zeros(21 * 3)  # 63
+    return np.concatenate([lh, rh])
+
 def draw_styled_landmarks(image, results):
-    # # Draw Face Connections
-    # mp_drawing.draw_landmarks(image, results.face_landmarks, mp_holistic.FACEMESH_TESSELATION,
-    #                           mp_drawing.DrawingSpec(color=(80, 110, 10), thickness=1, circle_radius=1),
-    #                           mp_drawing.DrawingSpec(color=(80, 256, 121), thickness=1, circle_radius=1))
-    # # Draw Pose Connections
-    # mp_drawing.draw_landmarks(image, results.pose_landmarks, mp_holistic.POSE_CONNECTIONS,
-    #                           mp_drawing.DrawingSpec(color=(80, 22, 10), thickness=1, circle_radius=1),
-    #                           mp_drawing.DrawingSpec(color=(80, 44, 121), thickness=1, circle_radius=1))
     # Draw Left Hand Connections
     mp_drawing.draw_landmarks(image, results.left_hand_landmarks,
                               mp_holistic.HAND_CONNECTIONS,
