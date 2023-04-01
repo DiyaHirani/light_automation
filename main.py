@@ -47,8 +47,6 @@ with holostic.mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_co
         image = ip.draw_boxes(image, bulbs)
 
 
-
-
         # prediction logic
         keypoints = holostic.extract_keypoints(results)
         sequence.insert(0, keypoints)
