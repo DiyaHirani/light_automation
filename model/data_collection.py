@@ -18,11 +18,11 @@ def extract_keypoints(results):
     #     if results.pose_landmarks else np.zeros(33 * 4)  # 132
     # face = np.array([[res.x, res.y, res.z] for res in
     # results.face_landmarks.landmark]).flatten() if results.face_landmarks else np.zeros(468 * 3)    # 1404
-    lh = np.array([[res.x, res.y, res.z] for res in results.left_hand_landmarks.landmark]).flatten() \
-        if results.left_hand_landmarks else np.zeros(21 * 3)  # 63
+    # lh = np.array([[res.x, res.y, res.z] for res in results.left_hand_landmarks.landmark]).flatten() \
+    #     if results.left_hand_landmarks else np.zeros(21 * 3)  # 63
     rh = np.array([[res.x, res.y, res.z] for res in results.right_hand_landmarks.landmark]).flatten() \
         if results.right_hand_landmarks else np.zeros(21 * 3)  # 63
-    return np.concatenate([lh, rh])
+    return np.concatenate([rh])
 
 
 def mediapipe_detection(image, model):
@@ -43,10 +43,10 @@ def draw_styled_landmarks(image, results):
     #                           mp_drawing.DrawingSpec(color=(80, 22, 10), thickness=1, circle_radius=1),
     #                           mp_drawing.DrawingSpec(color=(80, 44, 121), thickness=1, circle_radius=1))
     # Draw Left Hand Connections
-    mp_drawing.draw_landmarks(image, results.left_hand_landmarks,
-                              mp_holistic.HAND_CONNECTIONS,
-                              mp_drawing.DrawingSpec(color=(121, 22, 76), thickness=1, circle_radius=1),
-                              mp_drawing.DrawingSpec(color=(121, 44, 350), thickness=1, circle_radius=1))
+    # mp_drawing.draw_landmarks(image, results.left_hand_landmarks,
+    #                           mp_holistic.HAND_CONNECTIONS,
+    #                           mp_drawing.DrawingSpec(color=(121, 22, 76), thickness=1, circle_radius=1),
+    #                           mp_drawing.DrawingSpec(color=(121, 44, 350), thickness=1, circle_radius=1))
     # Draw Right Hand Connections
     mp_drawing.draw_landmarks(image, results.right_hand_landmarks,
                               mp_holistic.HAND_CONNECTIONS,
