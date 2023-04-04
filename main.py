@@ -11,7 +11,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense
 
 
-ser = serial.Serial('/dev/tty.usbmodem142301', 9600, timeout=1)
+ser = serial.Serial('/dev/tty.usbmodem144301', 9600, timeout=1)
 time.sleep(2)
 
 with open('model/newlabelstrain.csv', newline='') as f:
@@ -67,8 +67,7 @@ with holostic.mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_co
                 gesture = actions[np.argmax(res)]
                 print(gesture)
                 try:
-                    if right_hand_coords[0] < 0.5:
-                        print("Left")
+                    if right_hand_coords[0] < holostic.get_distance():
                         if gesture == "on":
                             ser.write(b'2')
                         elif gesture == "off":
@@ -76,7 +75,6 @@ with holostic.mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_co
                         else: pass
 
                     else:
-                        print("Right")
                         if gesture == "on":
                             ser.write(b'4')
                         elif gesture == "off":

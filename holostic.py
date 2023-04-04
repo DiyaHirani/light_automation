@@ -56,3 +56,6 @@ def get_hand_landmarks(results):
 
     return right_hand_coords
 
+
+def get_distance():
+    return 0.5
