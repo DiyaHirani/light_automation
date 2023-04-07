@@ -31,7 +31,7 @@ Credits
 
 [Diya Hirani](https://github.com/DiyaHirani)
 
-[Yashvi Agrawal]('https://github.com/aryanirani123')
+[Yashvi Agrawal](https://github.com/yashviagrawal)
 
 
 ## Approach
