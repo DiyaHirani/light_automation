@@ -29,7 +29,7 @@ Credits
 
 [Hirak Desai](https://www.github.com/hirak214)
 
-[Diya Hirani]('https://github.com/aryanirani123')
+[Diya Hirani](https://github.com/DiyaHirani)
 
 [Yashvi Agrawal]('https://github.com/aryanirani123')
 
