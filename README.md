@@ -3,6 +3,10 @@
 
 This project aims to create a smart lighting control system that allows users to control light bulbs using hand gestures.
 
+This project allows users to control light bulbs using hand gestures captured by a webcam. The system uses the MediaPipe Holistic library to detect hand gestures, OpenCV to process images, and TensorFlow Keras and NumPy for machine learning and data analysis. The control of the light bulbs is implemented using an Arduino microcontroller connected to a relay that switches the bulbs on and off.
+
+
+
 
 ## Requirements
 
