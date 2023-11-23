@@ -1,10 +1,16 @@
-# Light Autmoation
+
+https://github.com/DiyaHirani/light_automation/assets/53598504/f69dbcc6-92a1-472e-962d-7aba5d4affe1
+# Media Pipe - Holistic Based Home Automation
 ## MediaPipe Holisitc approach
 
 This project aims to create a smart lighting control system that allows users to control light bulbs using hand gestures.
 
 This project allows users to control light bulbs using hand gestures captured by a webcam. The system uses the MediaPipe Holistic library to detect hand gestures, OpenCV to process images, and TensorFlow Keras and NumPy for machine learning and data analysis. The control of the light bulbs is implemented using an Arduino microcontroller connected to a relay that switches the bulbs on and off.
 
+
+
+
+https://github.com/DiyaHirani/light_automation/assets/53598504/fc7629fe-6dcd-4677-89f9-0ea6703721f3
 
 
 
