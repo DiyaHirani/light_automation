@@ -12,8 +12,6 @@ This project allows users to control light bulbs using hand gestures captured by
 
 https://github.com/DiyaHirani/light_automation/assets/53598504/fc7629fe-6dcd-4677-89f9-0ea6703721f3
 
-
-
 ## Requirements
 
 **Python** (version 3.6 or higher)
@@ -27,10 +25,6 @@ https://github.com/DiyaHirani/light_automation/assets/53598504/fc7629fe-6dcd-467
 **NumPy**
 
 You will also need an Arduino board, a relay module, and a USB cable to connect the Arduino to your computer.
-
-
-
-
 
 
 ## Authors
