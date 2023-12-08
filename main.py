@@ -11,7 +11,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense
 
 
-ser = serial.Serial('/dev/tty.usbmodem144301', 9600, timeout=1)
+ser = serial.Serial('/dev/tty.usbmodem142301', 9600, timeout=1)
 time.sleep(2)
 
 with open('model/newlabelstrain.csv', newline='') as f:
